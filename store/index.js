@@ -28,7 +28,13 @@ export const actions = {
     const itemsResponses = await Promise.all( itemsPromises )
     const items = itemsResponses.map( res => res.data)
 
+    const realItems = items.map(
+      item => item ? item : {
+        title: "Failed to load",
+        id: 0
+      }
+    )
     // commit("setIds", ids)
-    commit( "setItems", items )
+    commit( "setItems", realItems )
   }
 }
