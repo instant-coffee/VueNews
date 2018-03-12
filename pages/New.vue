@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1> NEW
+    <h1 class="helvetica"> NEW
     </h1>
     <Items></Items>
   </div>
